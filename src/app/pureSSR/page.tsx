@@ -1,6 +1,3 @@
-// import the PokemonTable component from the components folder
-import PokemonTable from "@/components/PokemonTable";
-
 // import the SSRPokemonTable component from the components folder
 import SSRPokemonTable from "@/components/SSRPokemonTable";
 
