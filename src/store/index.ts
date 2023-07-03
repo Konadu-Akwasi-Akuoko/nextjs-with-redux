@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 // import the searchReducer function from the searchSlice file
 import searchReducer from "./searchSlice";
+import { pokemonApi } from "./pokemonAPI";
 
 // create a store object using the configureStore function
 // pass an object with a reducer property as an argument
@@ -11,6 +12,10 @@ import searchReducer from "./searchSlice";
 export const store = configureStore({
   reducer: {
     search: searchReducer,
+    pokemonApi: pokemonApi.reducer,
+  },
+  middleware(getDefaultMiddleware) {
+    return getDefaultMiddleware().concat(pokemonApi.middleware);
   },
 });
 
